@@ -1,5 +1,7 @@
 package ru.skypro;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,6 +21,7 @@ public class Main {
 
     public static void task1() {
         int[] arr = generateRandomArray();
+        System.out.println(Arrays.toString(arr));
 //        Задача первая
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -26,7 +29,7 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         sum = 0;
-
+//        вариант 2
         for (int i : arr) {
             sum = sum + i;
         }
@@ -44,7 +47,7 @@ public class Main {
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей. " + "Максимальная сумма трат за день составила " + max + " рублей.");
-
+//        вариант 2
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
@@ -59,16 +62,12 @@ public class Main {
 //        Задача третья
         float medium = (float) sum / (arr.length);
         System.out.println("Средняя сумма трат за месяц составила " + medium + " рублей.");
-        System.out.println(arr.length);
 
 //        Задача четвертая
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        System.out.println(reverseFullName.length);
         for (int i = reverseFullName.length-1; i >= 0 ; i--) {
             System.out.print(reverseFullName[i]);
-
         }
-
 
     }
 }
